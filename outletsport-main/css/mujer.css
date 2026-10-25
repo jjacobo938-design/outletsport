@@ -1,0 +1,101 @@
+/* Estilos propios de la página MUJER.
+   El encabezado y el pie se toman de index.css */
+
+.menu a.activo {
+    color: #aaa;
+    font-weight: normal;
+}
+
+/* ---------- CATÁLOGO ---------- */
+
+.catalogo {
+    padding: 20px 60px;
+}
+
+.catalogo h1,
+.catalogo h2 {
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    font-size: 15px;
+    line-height: 1.3;
+    color: #333;
+    max-width: 760px;
+    margin-bottom: 20px;
+}
+
+.lista-catalogo {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px 40px;
+}
+
+.item img {
+    width: 100%;
+    aspect-ratio: 6 / 5;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* La ropa usa fotos verticales, más altas que las zapatillas */
+#ropa .item img {
+    height: 180px;
+    object-fit: cover;
+}
+
+.item h3 {
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 28px;
+}
+
+.precio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.precio strong {
+    font-size: 12px;
+    font-weight: normal;
+    color: #111;
+}
+
+.agregar {
+    font-size: 22px;
+    color: #111;
+    text-decoration: none;
+}
+
+.agregar:hover {
+    color: #e2477c;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+    .catalogo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .lista-catalogo {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogo h1,
+    .catalogo h2 {
+        font-size: 22px;
+    }
+
+    .lista-catalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
